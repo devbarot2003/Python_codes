@@ -1,6 +1,9 @@
 #List is similar to an Array but they allow us to create
 #  micellaneous collection of items inside a list.
 
+#List is a mutable data type.
+
+
 list_proper = ["cake","pastery","popcorn","chocolates","ice cream"]
 print("The list consist of: ",list_proper,"\n")
 
