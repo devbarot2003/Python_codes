@@ -43,7 +43,9 @@ def game():
 
     if You_point>Comp_point:
         print(f"\nYou won most rounds!!\n Your points: {You_point}\nComputer points: {Comp_point}")
-    else:
+    elif Comp_point>You_point:
         print(f"Computer won most rounds!!\n Your points: {You_point}\nComputer points:{Comp_point}")
+    else:
+        print(f"Both has same points!!\n Your points: {You_point}\nComputer points:{Comp_point}")
 
 game()
