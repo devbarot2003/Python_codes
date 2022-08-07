@@ -21,31 +21,11 @@ def game():
 
         comp_ = random.choice(computer)
         
-        if (user_ == "R" and comp_ == "Rock"):
-            print("Your choice is: Rock\nComputer's choice is: Rock\nIt's a tie.")
-
-        elif(user_ == "P" and comp_ == "Paper"):
-            print("Your choice is: Paper\nComputer's choice is: Paper\nIt's a tie.")
-
-        elif(user_ == "S" and comp_ == "Scissor"):
-            print("Your choice is: Scissor\nComputer's choice is: Scissor\nIt's a tie.")
+        print("Your choice is: Rock\nComputer's choice is: Rock\nIt's a tie.") if (user_ == "R" and comp_ == "Rock") else print("Your choice is: Paper\nComputer's choice is: Paper\nIt's a tie.") if(user_ == "P" and comp_ == "Paper") else print("Your choice is: Scissor\nComputer's choice is: Scissor\nIt's a tie.") if(user_ == "S" and comp_ == "Scissor") else print()
+            
+        print(f"Your choice: {user_}\nComputer's choice: {comp_}"); print("You win Computer Lose."); You_point +=1 if(user_ == "R" and comp_ == "Scissor") or (user_ == "P" and comp_ == "Rock") or (user_ == "S" and comp_ == "Paper") else print(f"Your choice: {user_}\nComputer's choice: {comp_}"); print("Computer win You Lose.");Comp_point +=1 if (user_ == "S" and comp_ == "Rock") or (user_ == "R" and comp_ == "Paper") or (user_ == "P" and comp_ == "Scissor") else print()
         
-        if(user_ == "R" and comp_ == "Scissor") or (user_ == "P" and comp_ == "Rock") or (user_ == "S" and comp_ == "Paper"):
-            print(f"Your choice: {user_}\nComputer's choice: {comp_}")
-            print("You win Computer Lose.")
-            You_point +=1
-        
-        elif(user_ == "S" and comp_ == "Rock") or (user_ == "R" and comp_ == "Paper") or (user_ == "P" and comp_ == "Scissor"):
-            print(f"Your choice: {user_}\nComputer's choice: {comp_}")
-            print("Computer win You Lose.")
-            Comp_point +=1
         rounds -= 1
-
-    if You_point>Comp_point:
-        print(f"\nYou won most rounds!!\n Your points: {You_point}\nComputer points: {Comp_point}")
-    elif Comp_point>You_point:
-        print(f"Computer won most rounds!!\n Your points: {You_point}\nComputer points:{Comp_point}")
-    else:
-        print(f"Both has same points!!\n Your points: {You_point}\nComputer points:{Comp_point}")
+    print(f"\nYou won most rounds!!\n Your points: {You_point}\nComputer points: {Comp_point}") if You_point>Comp_point else print(f"Computer won most rounds!!\n Your points: {You_point}\nComputer points:{Comp_point}") if Comp_point>You_point else print(f"Both has same points!!\n Your points: {You_point}\nComputer points:{Comp_point}")
 
 game()
